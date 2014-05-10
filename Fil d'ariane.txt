@@ -2,3 +2,4 @@ FIL D'ARIANE:
 *************
 
 I) Créer les différents composants de base de la vie à Genotopia et gérer leur comportements.
+	1)Création de la bibliothèque de classes "CatalogueGene".
