@@ -30,23 +30,23 @@ namespace CatalogueGene
             {
                 case 0:
                     this.Type = BaseADN.BaseA;
-                    this.Nom = "Base A";
+                    this.Nom = "A";
                     break;
                 case 1:
                     this.Type = BaseADN.BaseC;
-                    this.Nom = "Base C";
+                    this.Nom = "C";
                     break;
                 case 2:
                     this.Type = BaseADN.BaseG;
-                    this.Nom = "Base G";
+                    this.Nom = "G";
                     break;
                 case 3:
                     this.Type = BaseADN.BaseT;
-                    this.Nom = "Base T";
+                    this.Nom = "T";
                     break;
                 default:
                     this.Type = BaseADN.BaseU;
-                    this.Nom = "Base U";
+                    this.Nom = "U";
                     break;
             }
         }
