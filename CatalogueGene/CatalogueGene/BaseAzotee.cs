@@ -16,10 +16,15 @@ namespace CatalogueGene
         public Random r = new Random();
         public BaseADN Type;
         public string Nom;
+        /// <summary>
+        /// nombre servant à identifier le type de Base.
+        /// </summary>
+        public int NumeroBase;
 
         public BaseAzotee(int n = 4)
         {
-            switch (r.Next(n))
+            this.NumeroBase = r.Next(n);
+            switch (this.NumeroBase)
             {
                 case 0:
                     this.Type = BaseADN.BaseA;
