@@ -10,36 +10,30 @@ namespace CatalogueGene
     {
         public BaseAzotee[] Bases = new BaseAzotee[2];
         public string Nom;
-        //public int Position;
 
-        public PaireDeBase()
-        {
-            this.Bases[0] = new BaseAzotee();
-            this.Nom += Bases[0].Nom;
-            this.Bases[1] = new BaseAzotee();
-            switch (Bases[0].NumeroBase)
+        public PaireDeBase(BaseAzotee base1)
+        {;
+            this.Bases[0] = base1;
+            BaseADN type;
+            switch (base1.Type)
             {
-                case 0:
-                    Bases[1].Type = BaseADN.BaseT;
-                    Bases[1].Nom = "T";
+                case BaseADN.BaseA:
+                    type = BaseADN.BaseT;
                     break;
-                case 1:
-                    Bases[1].Type = BaseADN.BaseG;
-                    Bases[1].Nom = "G";
+                case BaseADN.BaseC:
+                    type = BaseADN.BaseG;
                     break;
-                case 2:
-                    Bases[1].Type = BaseADN.BaseC;
-                    Bases[1].Nom = "C";
+                case BaseADN.BaseG:
+                    type = BaseADN.BaseC;
                     break;
-                case 3:
-                    Bases[1].Type = BaseADN.BaseA;
-                    Bases[1].Nom = "A";
+                case BaseADN.BaseT:
+                    type = BaseADN.BaseA;
                     break;
                 default:
-                    Bases[1].Type = BaseADN.BaseU;
-                    Bases[1].Nom = "U";
+                    type = BaseADN.BaseU;
                     break;
             }
+            this.Bases[1] = new BaseAzotee(type);
             this.Nom = Bases[0].Nom + Bases[1].Nom;
         }
     }
