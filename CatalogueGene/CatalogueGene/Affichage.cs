@@ -38,15 +38,18 @@ namespace CatalogueGene
                         Console.ForegroundColor = ConsoleColor.Gray;
                         Console.Write(nom[i]);
                         break;
+                    default:
+                        Console.Write(" ");
+                        break;
                 }
             }
             Console.Write("\n");
             Console.ForegroundColor = ConsoleColor.White;
         }
-        public static void Genon(string nom)
+        public static string[] Genon(string nom, bool affiche = true)
         {
-            string helice1="";
-            string helice2="";
+            string helice1 = "";
+            string helice2 = "";
             for (int i = 0; i < nom.Length; i++)
             {
                 if (i == 0 || i % 2 == 0)
@@ -58,8 +61,32 @@ namespace CatalogueGene
                     helice2 += nom[i];
                 }
             }
+            if (affiche)
+            {
+                Nom(helice1);
+                Nom(helice2);
+            }
+            string[] tab = new string[2];
+            tab[0] = helice1;
+            tab[1] = helice2;
+            return tab;
+        }
+        public static void Gene(Gene gene)
+        {
+            string helice1 = Genon(gene.GenonActiveur.Nom, false)[0];
+            string helice2 = Genon(gene.GenonActiveur.Nom, false)[1];
+
+            helice1 += " ";
+            helice2 += " ";
+
+            helice1 += Genon(gene.Nom, false)[0];
+            helice2 += Genon(gene.Nom, false)[1];
+
             Nom(helice1);
             Nom(helice2);
+            Console.WriteLine();
+            
+
         }
     }
 }

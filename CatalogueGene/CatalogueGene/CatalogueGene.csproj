@@ -43,6 +43,7 @@
     <Compile Include="Affichage.cs" />
     <Compile Include="BaseAzotee.cs" />
     <Compile Include="Codon.cs" />
+    <Compile Include="Gene.cs" />
     <Compile Include="Genon.cs" />
     <Compile Include="PaireDeBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
