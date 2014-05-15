@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activeur.cs" />
     <Compile Include="Affichage.cs" />
     <Compile Include="BaseAzotee.cs" />
+    <Compile Include="Codon.cs" />
     <Compile Include="Genon.cs" />
     <Compile Include="PaireDeBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

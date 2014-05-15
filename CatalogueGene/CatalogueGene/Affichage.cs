@@ -43,5 +43,23 @@ namespace CatalogueGene
             Console.Write("\n");
             Console.ForegroundColor = ConsoleColor.White;
         }
+        public static void Genon(string nom)
+        {
+            string helice1="";
+            string helice2="";
+            for (int i = 0; i < nom.Length; i++)
+            {
+                if (i == 0 || i % 2 == 0)
+                {
+                    helice1 += nom[i];
+                }
+                else
+                {
+                    helice2 += nom[i];
+                }
+            }
+            Nom(helice1);
+            Nom(helice2);
+        }
     }
 }
