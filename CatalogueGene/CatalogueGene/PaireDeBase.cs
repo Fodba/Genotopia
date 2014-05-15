@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace CatalogueGene
 {
+    /// <summary>
+    /// classe représentant une paire de Base d'ADN.
+    /// </summary>
     public class PaireDeBase
     {
+        /// <summary>
+        /// tableau representant les deux Bases associées.
+        /// </summary>
         public BaseAzotee[] Bases = new BaseAzotee[2];
         public string Nom;
 

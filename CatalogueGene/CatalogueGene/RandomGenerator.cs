@@ -9,10 +9,15 @@ namespace CatalogueGene
     public class RandomGenerator
     {
         static Random r = new Random();
-        public static BaseADN TypeBaseAleatoire(int n = 4)
+        /// <summary>
+        /// retourne un BaseADN aléatoire
+        /// </summary>
+        /// <param name="nombreBase">nombre max de Bases parmis lesquelles faire la sélection</param>
+        /// <returns></returns>
+        public static BaseADN TypeBaseAleatoire(int nombreBase = 4)
         {
             BaseADN Base;
-            switch (r.Next(n))
+            switch (r.Next(nombreBase))
             {
                 case 0:
                     Base = BaseADN.BaseA;
@@ -32,9 +37,14 @@ namespace CatalogueGene
             }
             return Base;
         }
-        public static BaseAzotee BaseAleatoire(int n = 4)
+        /// <summary>
+        /// retourne un BaseAzotee aléatoire
+        /// </summary>
+        /// <param name="nombreBase">nombre max de Bases parmis lesquelles faire la sélection</param>
+        /// <returns></returns>
+        public static BaseAzotee BaseAleatoire(int nombreBase = 4)
         {
-            BaseAzotee Base = new BaseAzotee(RandomGenerator.TypeBaseAleatoire(n));
+            BaseAzotee Base = new BaseAzotee(RandomGenerator.TypeBaseAleatoire(nombreBase));
             return Base;
         }
     }
