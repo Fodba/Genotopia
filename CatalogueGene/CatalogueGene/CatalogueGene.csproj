@@ -39,15 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Activeur.cs" />
-    <Compile Include="Affichage.cs" />
-    <Compile Include="BaseAzotee.cs" />
-    <Compile Include="Codon.cs" />
-    <Compile Include="Gene.cs" />
-    <Compile Include="Genon.cs" />
-    <Compile Include="PaireDeBase.cs" />
+    <Compile Include="Genome\Activeur.cs" />
+    <Compile Include="Console\Affichage.cs" />
+    <Compile Include="Genome\BaseAzotee.cs" />
+    <Compile Include="Genome\Codon.cs" />
+    <Compile Include="Genome\Gene.cs" />
+    <Compile Include="Genome\Genon.cs" />
+    <Compile Include="Genome\PaireDeBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomGenerator.cs" />
+    <Compile Include="Fonctions\RandomGenerator.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
