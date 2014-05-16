@@ -1,4 +1,6 @@
 FIL D'ARIANE:
 *************
 
-I) CrÃ©er les diffÃ©rents composants de base de la vie Ã  Genotopia et gÃ©rer leur comportements.
+I) Créer les différents composants de base de la vie à  Genotopia.
+2) Gérer la représentation graphique de ces composants.
+3) Gérer les comportements de ces composants.
