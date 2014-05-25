@@ -97,8 +97,6 @@ namespace CatalogueGene
                 Nom(helice1);
                 Nom(helice2);
                System.Console.WriteLine();
-
-
             }
         }
     }
