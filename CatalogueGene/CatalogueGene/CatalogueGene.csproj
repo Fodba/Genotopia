@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Existence\Couleur.cs" />
     <Compile Include="Fonctions\Vie.cs" />
     <Compile Include="Genome\Activeur.cs" />
     <Compile Include="Console\Affichage.cs" />
@@ -57,9 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Fonctions\RandomGenerator.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Vie\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
