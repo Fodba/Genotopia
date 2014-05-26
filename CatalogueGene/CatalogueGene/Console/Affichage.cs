@@ -90,8 +90,8 @@ namespace CatalogueGene
                 string helice2 = Genon(gene.GenonActiveur.Nom, false)[1];
                 string[] nomComplet = new string[2];
 
-                helice1 += "\n";
-                helice2 += "\n";
+                helice1 += " ";
+                helice2 += " ";
 
                 helice1 += Genon(gene.Nom, false)[0];
                 helice2 += Genon(gene.Nom, false)[1];

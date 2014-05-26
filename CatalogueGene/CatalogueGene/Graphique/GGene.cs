@@ -9,7 +9,8 @@ using System.ComponentModel;
 using CatalogueGene.Fonctions;
 using CatalogueGene.Console;
 using CatalogueGene.Genome;
-using CatalogueGene.Existence;
+using CatalogueGene.Existence.Apparence;
+using CatalogueGene.Existence.Vie.Habitat;
 
 namespace CatalogueGene
 {
@@ -20,7 +21,8 @@ namespace CatalogueGene
             public string Nom;
             public Color couleur;
             private Gene geneRecu;
-            private List<Panel> GBase;
+            public bool dejaColore = false;
+            public int[] RGB = new int[3];
 
             public GGene(Gene gene)
             {
@@ -28,23 +30,37 @@ namespace CatalogueGene
                 this.Nom = geneRecu.Nom;
             }
 
-            public void AfficheGene(Form fenetre, int typeAffichage = 0)
+            public void AfficheGene(Form fenetre)
+            {
+                GGene soi = this;
+                soi.Controls.Clear();
+                Couleur.AfficheSequence(geneRecu, soi);
+
+                fenetre.Controls.Add(soi);
+                //fenetre.Size = soi.Size;
+            }
+
+            public void AfficheGene(Panel panel, bool typeAffichage = false)
             {
                 GGene soi = this;
                 switch (typeAffichage)
                 {
-                    case 1:
-                        Couleur.ColoreGeneSplit(geneRecu, soi);
-                        break;
-                    case 2:
-                        Couleur.ColoreGene(geneRecu, soi);
+                    case true:
+                        Couleur.AfficheSequence(geneRecu, soi);
                         break;
                     default:
-                        Couleur.DoubleAffichage(geneRecu, soi);
+                        if (!this.dejaColore)
+                        {
+                            RGB = Couleur.ColoreGene(geneRecu, soi);
+                            this.dejaColore = true;
+                        }
+                        soi.BackColor = Color.FromArgb(RGB[0], RGB[1], RGB[2]);
                         break;
                 }
-                fenetre.Controls.Add(soi);
-                fenetre.Size = soi.Size;
+
+                panel.Controls.Add(soi);
+                //fenetre.Controls.Add(panel);
+                //fenetre.Size = soi.Size;
             }
         }
 

@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Existence\Couleur.cs" />
+    <Compile Include="Existence\Apparence\Taille.cs" />
+    <Compile Include="Existence\Vie\Habitat\Aire.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Existence\Apparence\Couleur.cs" />
+    <Compile Include="Existence\Vie\Organismes\Simples\UniGene.cs" />
     <Compile Include="Fonctions\Vie.cs" />
     <Compile Include="Genome\Activeur.cs" />
     <Compile Include="Console\Affichage.cs" />
