@@ -16,7 +16,6 @@ namespace CatalogueGene
 
             public PaireDeBase(BaseAzotee base1)
             {
-                ;
                 this.Bases[0] = base1;
                 BaseADN type;
                 switch (base1.Type)

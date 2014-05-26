@@ -46,6 +46,15 @@ namespace CatalogueGene
                 BaseAzotee Base = new BaseAzotee(RandomGenerator.TypeBaseAleatoire(nombreBase));
                 return Base;
             }
+            /// <summary>
+            /// retourne un nombre aléatoire
+            /// </summary>
+            /// <param name="maximum"></param>
+            /// <returns></returns>
+            public static int NombreAleatoire(int maximum, int minimum = 0)
+            {
+                return r.Next(minimum, maximum);
+            }
         }
     }
 }

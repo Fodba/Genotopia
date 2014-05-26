@@ -10,7 +10,7 @@ namespace CatalogueGene
             /// retourne une chaine de caractères en couleur.
             /// </summary>
             /// <param name="nom"></param>
-            public static void Nom(string nom)
+            public static string Nom(string nom)
             {
                 for (int i = 0; i < nom.Length; i++)
                 {
@@ -45,8 +45,9 @@ namespace CatalogueGene
                             break;
                     }
                 }
-               System.Console.Write("\n");
-               System.Console.ForegroundColor =System.ConsoleColor.White;
+                System.Console.Write("\n");
+                System.Console.ForegroundColor =System.ConsoleColor.White;
+                return nom;
             }
             /// <summary>
             /// retourne une double chaine de caractères colorée. 
@@ -83,20 +84,26 @@ namespace CatalogueGene
             /// retourne le nom du Gene sous forme d'une double chaine de caractère colorée.
             /// </summary>
             /// <param name="gene"></param>
-            public static void Gene(Gene gene)
+            public static string Gene(Gene gene,bool affiche=true)
             {
                 string helice1 = Genon(gene.GenonActiveur.Nom, false)[0];
                 string helice2 = Genon(gene.GenonActiveur.Nom, false)[1];
+                string[] nomComplet = new string[2];
 
-                helice1 += " ";
-                helice2 += " ";
+                helice1 += "\n";
+                helice2 += "\n";
 
                 helice1 += Genon(gene.Nom, false)[0];
                 helice2 += Genon(gene.Nom, false)[1];
 
-                Nom(helice1);
-                Nom(helice2);
-               System.Console.WriteLine();
+                
+                nomComplet[0] = Nom(helice1);
+                nomComplet[1] = Nom(helice2);
+                if (affiche)
+                {
+                    System.Console.WriteLine();
+                }
+               return nomComplet[0];
             }
         }
     }
